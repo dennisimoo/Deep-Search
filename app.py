@@ -123,11 +123,10 @@ def api_transcript(video_id):
 
 if __name__ == '__main__':
     # Get proxy from environment variable
-    proxy = os.getenv('YOUTUBE_PROXY', '200.174.198.86:8888')
+    proxy = os.getenv('YOUTUBE_PROXY')
     if proxy:
-        os.environ['YOUTUBE_PROXY'] = proxy
         print(f"Using proxy: {proxy}")
     else:
-        print("No proxy configured")
+        print("No proxy configured - using direct connection")
     
     app.run(host='0.0.0.0', port=33079, debug=True)
