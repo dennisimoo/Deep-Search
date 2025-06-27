@@ -122,8 +122,8 @@ def api_transcript(video_id):
         }), 500
 
 if __name__ == '__main__':
-    # Get proxy from environment variable
-    proxy = os.getenv('YOUTUBE_PROXY')
+    # Get proxy from environment variable  
+    proxy = os.getenv('YOUTUBE_PROXY', '45.76.97.117:3128')  # Try different proxy
     if proxy:
         print(f"Using proxy: {proxy}")
     else:
